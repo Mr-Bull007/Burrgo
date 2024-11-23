@@ -1,0 +1,28 @@
+Ep2 learnings:
+  - npm => fullform is not Node Package Manager, but it is one.
+  - caret(^) vs tilde(~)
+  - package.json vs package-lock.json
+  - node_modules?
+  - transitive dependencies?
+  - no to putting node_modules on git, yes to putting package.json & package-lock.json on git
+  - npx(execute a package) vs npm(for installing a package)
+  - We can also use React in our project using npm
+  - The way to use React via CDN links is not the preferred way.
+
+Ep3 learnings:
+  - Instead of calling npx parcel index.html, write the script in package.json
+  - npm start = npm run start
+  - Writing react code in .js file isn't making out lived easier. So they came up with JSX.
+  - Note that JSX is not a part of react or it is not the case that react can't be written w/o JSX.
+  - JSX = JS + HTML
+  - Now many think that jsx is nothing but html inside js, but it is not true. JSX is not html, it is an html-like syntax.
+  - JSX code is first converted to React Element(which is an object) which is then converted to html element.
+  - The task of converting jsx to react element is done by Babel (a transpiler or JS compiler).
+  - In JSX, attributes are given in Camel-case!
+  - Components in React => two types = Class-based(OLD way) and Functional(NEW way)
+  - A Functional Component is a function that "returns" some React element/JSX code.
+  - When we use one React component into another React Component, it is called Component Composition.
+  - Any JS expression can be written inside a Component by covering it inside a {}.
+  - If you want to use a component inside another component/element, use <Component /> or {Component()} and if you want to use an elemtent inside a component/element, use {Element}.
+  - <Component /> = <Component></Component>
+  - Also, JSX sanitises whatever info we bring under {} instead of blindly passing it further. Hence, it also checks Cross Site Scripting.

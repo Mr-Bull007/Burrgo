@@ -1,0 +1,31 @@
+{
+  "name": "namaste-dev-course",
+  "version": "1.0.0",
+  "description": "This is the npm for my project.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-Bull007/Learning-React.git"
+  },
+  "author": "Rushabh Sagara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mr-Bull007/Learning-React/issues"
+  },
+  "homepage": "https://github.com/Mr-Bull007/Learning-React#readme",
+  "devDependencies": {
+    "parcel": "^2.13.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
