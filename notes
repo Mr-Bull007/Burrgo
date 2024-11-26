@@ -1,28 +1,53 @@
 Ep2 learnings:
-  - npm => fullform is not Node Package Manager, but it is one.
-  - caret(^) vs tilde(~)
-  - package.json vs package-lock.json
-  - node_modules?
-  - transitive dependencies?
-  - no to putting node_modules on git, yes to putting package.json & package-lock.json on git
-  - npx(execute a package) vs npm(for installing a package)
-  - We can also use React in our project using npm
-  - The way to use React via CDN links is not the preferred way.
+
+- npm => fullform is not Node Package Manager, but it is one.
+- caret(^) vs tilde(~)
+- package.json vs package-lock.json
+- node_modules?
+- transitive dependencies?
+- no to putting node_modules on git, yes to putting package.json & package-lock.json on git
+- npx(execute a package) vs npm(for installing a package)
+- We can also use React in our project using npm
+- The way to use React via CDN links is not the preferred way.
 
 Ep3 learnings:
-  - Instead of calling npx parcel index.html, write the script in package.json
-  - npm start = npm run start
-  - Writing react code in .js file isn't making out lived easier. So they came up with JSX.
-  - Note that JSX is not a part of react or it is not the case that react can't be written w/o JSX.
-  - JSX = JS + HTML
-  - Now many think that jsx is nothing but html inside js, but it is not true. JSX is not html, it is an html-like syntax.
-  - JSX code is first converted to React Element(which is an object) which is then converted to html element.
-  - The task of converting jsx to react element is done by Babel (a transpiler or JS compiler).
-  - In JSX, attributes are given in Camel-case!
-  - Components in React => two types = Class-based(OLD way) and Functional(NEW way)
-  - A Functional Component is a function that "returns" some React element/JSX code.
-  - When we use one React component into another React Component, it is called Component Composition.
-  - Any JS expression can be written inside a Component by covering it inside a {}.
-  - If you want to use a component inside another component/element, use <Component /> or {Component()} and if you want to use an elemtent inside a component/element, use {Element}.
-  - <Component /> = <Component></Component>
-  - Also, JSX sanitises whatever info we bring under {} instead of blindly passing it further. Hence, it also checks Cross Site Scripting.
+
+- Instead of calling npx parcel index.html, write the script in package.json
+- npm start = npm run start
+- Writing react code in .js file isn't making out lived easier. So they came up with JSX.
+- Note that JSX is not a part of react or it is not the case that react can't be written w/o JSX.
+- JSX = JS + HTML
+- Now many think that jsx is nothing but html inside js, but it is not true. JSX is not html, it is an html-like syntax.
+- JSX code is first converted to React Element(which is an object) which is then converted to html element.
+- The task of converting jsx to react element is done by Babel (a transpiler or JS compiler). Parcel gives the responsibility of transpilation to Babel.
+- Babel is not created by Facebook.
+- The JS engine does not understand JSX because the JS engine understands ECMAScript or ES6+ code.
+- Before the code gets to JS Engine it is sent to Parcel and Transpiled there.
+- Transpilation ⇒ Converting the code in such a format that the browsers can understand.
+- In JSX, attributes are given in Camel-case!
+- Components in React => two types = Class-based(OLD way) and Functional(NEW way)
+- A Functional Component is a function that "returns" some React element/JSX code.
+- When we use one React component into another React Component, it is called Component Composition.
+- Any JS expression can be written inside a Component by covering it inside a {}.
+- If you want to use a component inside another component/element, use <Component /> or {Component()} and if you want to use an elemtent inside a component/element, use {Element}.
+- <Component /> = <Component></Component>
+- Also, JSX sanitises whatever info we bring under {} instead of blindly passing it further. Hence, it also checks Cross Site Scripting.
+
+Ep4 Learnings:
+
+- The best way in approaching any project is to plan first. Hence, planning is essential.
+- 1st step of planning = creating a wireframe or UI design or layout.
+- whatever properties are passed to the component, becomes a prop.
+- "Destructuring on the Fly" - doing the same thing but without the word 'prop'.
+- Passing props to a function is primarily a React concept, although it is built on JavaScript's ability to pass arguments to functions.
+- "Destr. on the Fly" is a JS thing, not limited to just React.
+- "Config-driven UI" refers to a design approach where the user interface (UI) is generated or configured based on external configuration data, rather than being hardcoded or statically defined in the application code.
+- "Optional Chaining" = "?."
+- Whenever you're mapping through an Array (using Array.map), always pass a "key" unique to each of the item.
+- The logic behind giving a key to each of the Array object, is because once a new entrant is there, unless the key is given, React will re-render every card from scratch, which leads to an optimisation issue or a performance hit.
+- Another thing to note is that in the .map function, the index (of the mapped Array), is the second prop. Now, many developers pass the index of the Array as the key for each object since the index will be unique for each object, BUT React itself says that one shouldn't use indices as keys.
+
+Ep5 Learnings:
+
+- Industry standard to use a "src" file and "components" file, but it is not mandatory to follow a particular structure.
+- Now, there are two kinds of exports: default(can only be one) and named.
