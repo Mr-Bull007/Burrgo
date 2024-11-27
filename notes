@@ -51,3 +51,8 @@ Ep5 Learnings:
 
 - Industry standard to use a "src" file and "components" file, but it is not mandatory to follow a particular structure.
 - Now, there are two kinds of exports: default(can only be one) and named.
+- There's a Data layer and a UI layer. Each of the frameworks like React, Angular, etc. are trying to tackle on how to make the UI layer compatible with the Data layer. 
+- And for that, React uses hooks. React Hooks are nothing but normal JS utility functions.
+- The special thing about React hooks(useState, etc.) is that whenever a State variable updates, React re-renders the component, making the UI layer compatible with the changing data layer. 
+- It is this property of React that makes it super-fast. 
+- Important concepts accompanying this hook concept are: Virtual DOM, Reconciliation Algo (or React Fiber) and Diff Algo.

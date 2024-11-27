@@ -1,16 +1,16 @@
 import { FOOD_URL } from "../utils/constants";
 
-const RestaurantCard = ({resName, resFood, resRating}) => {
+const RestaurantCard = ({resData}) => {
     return (
       <div className="res-card">
         <div className="food-image">
-          <img src={FOOD_URL} />
+          <img src={FOOD_URL} alt="food" />
         </div>
         <div className="res-name">
-          <h2>{resName}</h2>
+          <h2>{resData.resName}</h2>
         </div>
-        <div className="food-name"><h3>{resFood}</h3></div>
-        <div className="Rating"><h3>{resRating}</h3></div>
+        <div className="food-name"><h3>{resData.resFood}</h3></div>
+        <div className="Rating"><h3>{resData.resRating}</h3></div>
       </div>
     );
   };
