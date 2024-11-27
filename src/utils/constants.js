@@ -1,2 +1,2 @@
 export const LOGO_URL = "https://icon-library.com/images/food-app-icon/food-app-icon-0.jpg"
-export const FOOD_URL = "https://product-assets.faasos.io/eatsure_cms/production/a2963595-02b9-4472-80a5-e790d9308d93.jpg"
+export const FOOD_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"

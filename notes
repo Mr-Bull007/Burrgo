@@ -56,3 +56,7 @@ Ep5 Learnings:
 - The special thing about React hooks(useState, etc.) is that whenever a State variable updates, React re-renders the component, making the UI layer compatible with the changing data layer. 
 - It is this property of React that makes it super-fast. 
 - Important concepts accompanying this hook concept are: Virtual DOM, Reconciliation Algo (or React Fiber) and Diff Algo.
+
+Ep6 Learnings:
+
+- The fetch() is a feature that is provided not by React or JS, but by browser. It is a browser API used to make network requests (such as HTTP requests) to retrieve data from a server or send data to a server.

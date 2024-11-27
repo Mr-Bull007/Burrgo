@@ -51,7 +51,7 @@
 }
 .res-card {
     width: 200px;
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
     background-color: #f0f0f0;
 }
@@ -68,4 +68,20 @@
 
 .body {
     margin:5px;
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    width: 200px;
+    height: 400px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+
+.logging {
+    padding: 0 10px;
 }
