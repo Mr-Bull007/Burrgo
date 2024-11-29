@@ -42,7 +42,7 @@ Ep4 Learnings:
 - Passing props to a function is primarily a React concept, although it is built on JavaScript's ability to pass arguments to functions.
 - "Destr. on the Fly" is a JS thing, not limited to just React.
 - "Config-driven UI" refers to a design approach where the user interface (UI) is generated or configured based on external configuration data, rather than being hardcoded or statically defined in the application code.
-- "Optional Chaining" = "?."
+- "Optional Chaining" = "?." => a feature introduced in JavaScript (ES2020) that helps to avoid runtime errors when trying to access properties on objects that may not exist, preventing you from writing multiple checks for each level.
 - Whenever you're mapping through an Array (using Array.map), always pass a "key" unique to each of the item.
 - The logic behind giving a key to each of the Array object, is because once a new entrant is there, unless the key is given, React will re-render every card from scratch, which leads to an optimisation issue or a performance hit.
 - Another thing to note is that in the .map function, the index (of the mapped Array), is the second prop. Now, many developers pass the index of the Array as the key for each object since the index will be unique for each object, BUT React itself says that one shouldn't use indices as keys.
@@ -60,3 +60,12 @@ Ep5 Learnings:
 Ep6 Learnings:
 
 - The fetch() is a feature that is provided not by React or JS, but by browser. It is a browser API used to make network requests (such as HTTP requests) to retrieve data from a server or send data to a server.
+   - The fetch() function itself returns a Promise that resolves to a "Response" object once the HTTP request completes successfully.
+   - The "Response" object contains methods like .json() to parse the actual response data.
+   - Now, what is a "Promise"? => A Promise is an object representing the eventual completion (or failure) of an asynchronous operation. When the Promise resolves, you get the Response object.
+   - The Response object represents the entire response to the request, including the data, headers, and status.
+- A very important thing to note is that whenever state variable updates, react triggers a reconciliation cycle i.e it re-renders the whole component.
+- Shimmer UI => a visual effect commonly used in web and mobile interfaces that helps to enhance user experience by visually indicating that data is being fetched or processed in the background, rather than leaving users with a blank or static screen.
+- Diff b/w JS expressions and JS statements => Expressions are evaluated while Statements are executed.
+- "async" and "await" are modern JavaScript keywords used to work with asynchronous code more easily. Async declares a function to be asynchronous and await can be used inside that async function to pause the execution of that function before waiting for the execution of the line of code where it is put. "await" is used to pause the execution of the function until the Promise is resolved (or rejected).
+
