@@ -69,3 +69,25 @@ Ep6 Learnings:
 - Diff b/w JS expressions and JS statements => Expressions are evaluated while Statements are executed.
 - "async" and "await" are modern JavaScript keywords used to work with asynchronous code more easily. Async declares a function to be asynchronous and await can be used inside that async function to pause the execution of that function before waiting for the execution of the line of code where it is put. "await" is used to pause the execution of the function until the Promise is resolved (or rejected).
 
+Ep7 Learnings:
+
+- In useEffect, if there's no dependency array, then it'll run after each and every render of the component.
+- But if an empty dependency array is there, then useEffect will be called only after the initial render.
+- But if the dependency array is not empty and have some dependency, then useEffect will be called only (& everytime) when that dependency changes/updates.
+- The thing to keep in mind is that the useEffect will always be called after the initial render.
+- Never use useState o/s of the functional component. It is always used to create a local state variable inside the functional component.
+- Also, one should not create useState in an if-else statement or a for loop or any conditionals or also under any functions inside the functional component. 
+- useState is meant to be created only inside the functional component and are to be placed on the top of the code i/s the functional component.
+- To create a Router setup in order to load various other pages, we need to install react-router-dom npm package.
+- createBrowserRouter from react-router-dom helps in creating the router config, while RouterProvider is used to provide the project the router configuration.
+- Note that RouterProvider (from react-router-dom) is a component.
+- rafce => to create a boiler-plate of a component quickly.
+- useRouteError => it is a hook provided by react-router-dom to give us more details about the error.
+- In order to make the header and footer stay intact, we need children routes and an Outlet component (which is imported from react-router-dom).
+- In react, whenever we want to route to another page from one, never use anchor tags. Because once we try to move towards another page using anchor tag, the whole page gets refreshed.
+- In order to not refresh the whole page, react-router-dom comes up with the Link Component. It works exactly the same as anchor component. Only difference is that <a> has an "href" prop, while <Link> has a "to" prop. Now, behind the scenes, Link is nothing but an anchor tag.
+- So, Link (unlike anchor) won't reload the whole page, but just refreshes the Outlet component only. That is why React is also known as Single Page Application (SPA). Hence, while navigating to different sub-sections of the website, under React, one doesn't have to reload the whole website again and again.
+- Now, there are two types of routing that Web Applications (not just React) can have => 1) Client Side Routing & 2) Server Side Routing;
+- Server Side Routing is when you make a networkcall, and the .html page is coming from the Server itself.
+- Client Side Routing is what React does. It has already loaded up all the components in the first go when it loaded the App component. And whenever a page is clicked to be loaded, react just loads up the required component, without making any network call. This is called Client Side Routing.
+- Hence, it is just a one page and the components are getting interchanged as per the need. That is why it is called Single Page Application (SPA).

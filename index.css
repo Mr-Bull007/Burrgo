@@ -50,6 +50,7 @@
     flex-wrap: wrap;
 }
 .res-card {
+    min-height: 400px;
     width: 200px;
     margin: 10px;
     padding: 5px;
@@ -84,4 +85,15 @@
 
 .logging {
     padding: 0 10px;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-img > img {
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid black;
 }
