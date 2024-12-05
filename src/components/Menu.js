@@ -25,9 +25,10 @@ const Menu = () => {
     setResName(jsonData?.data?.cards[0]?.card?.card?.text);
   };
 
-  return menuData.length === 0 ? (
-    <Shimmer />
-  ) : (
+  if (menuData.length === 0) {
+    return <Shimmer/>
+  }
+  return (
     <div className="menu">
       <div className="restaurant-name">
         <h1>{resName}</h1>

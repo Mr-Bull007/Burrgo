@@ -91,3 +91,19 @@ Ep7 Learnings:
 - Server Side Routing is when you make a networkcall, and the .html page is coming from the Server itself.
 - Client Side Routing is what React does. It has already loaded up all the components in the first go when it loaded the App component. And whenever a page is clicked to be loaded, react just loads up the required component, without making any network call. This is called Client Side Routing.
 - Hence, it is just a one page and the components are getting interchanged as per the need. That is why it is called Single Page Application (SPA).
+
+Ep8 Learnings:
+
+- Class-based-components (CBC) extends React.component and have a render method which returns the jsx code that we want. It was the earlier method of writing react code, now replaced by Functional components.
+- To create props in CBC, we use Constructor(props) {}, and we have super(props) inside it. Why super(props)? => In JavaScript, when you create a subclass (like MyComponent extends React.Component), you are inheriting methods and properties from the parent class (React.Component).
+  - The constructor method in the subclass (MyComponent) must call super() to initialize the parent class, otherwise, the subclass (MyComponent) doesn't have access to the "this" keyword and its properties from the parent class (React.Component).
+- In order to create a State variable in CBC, we have to create it inside Constructor(props).
+- To note: NEVER UPDATE STATE VARIABLE DIRECTLY USING "=".
+- So how do we update our state variable in CBC? => by using this.setState().
+- Note: In case this.State() have many elements, and if this.setState() updates only one or few of those elements, then React will update only those elements, and it won't touch the other elements. How you ask? => Remember the Reconciliation Algo containing the Diff Algo!
+- In CBCs, what is the life cycle method? =>  In CBCs, when it is loaded/mounted, first, the constructor() is loaded, then it goes to the render() and then it goes to the componentDidMount(). In case, parent and child are there, then: parents' constructor => parents' render => child's constructor => child's render => child's componentDidMount => Parent's componentDidMount.
+- Now, in case of multiple child components, the lifecycle follows the following path(example of two children):
+   - Parent's constructor => Parent's render => 1st Child's constructor => 1st Child's render => 2nd Child's constructor => 2nd Child's render => 1st Child's componentDidMount => 2nd Child's componentDidMount => Parent's componentDidMount.
+- Why is it like this? => Because, in CBCs, the React lifecycle used to have two phases: Render and Commit phases. 
+- Also, it use to happen in three cycles: ComponentDidMount, componentWillUpdate and componentWillUnmount.
+- In useEffect, we can give a call-back function that is run when the page is changed. 

@@ -9,7 +9,7 @@ const RestaurantCard = ({resData}) => {
         <div className="res-name">
           <h2>{resData?.info?.name}</h2>
         </div>
-        <div className="food-name"><h3>{resData?.info?.cuisines.join(", ")}</h3></div>
+        <div className="food-name"><p>{resData?.info?.cuisines.join(", ")}</p></div>
         <div className="Rating"><h3>{resData?.info?.avgRating}</h3></div>
       </div>
     );

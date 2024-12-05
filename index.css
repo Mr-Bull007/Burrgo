@@ -1,3 +1,6 @@
+* {
+    padding: 0 20px;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -55,13 +58,22 @@
     margin: 10px;
     padding: 5px;
     background-color: #f0f0f0;
+    border-radius: 10px;
 }
 .res-card:hover {
     border: 1px solid black;
     cursor: pointer;
 }
+.food-image {
+    padding: 0;
+    margin: 5px;
+}
 .food-image > img {
    width:100%;
+   padding: 0;
+   object-fit: cover;
+   border-radius: 10px;
+   height:100px;
 }
 .top-filter {
     padding: 10px;
@@ -96,4 +108,9 @@
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
