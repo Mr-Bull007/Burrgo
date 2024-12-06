@@ -107,3 +107,11 @@ Ep8 Learnings:
 - Why is it like this? => Because, in CBCs, the React lifecycle used to have two phases: Render and Commit phases. 
 - Also, it use to happen in three cycles: ComponentDidMount, componentWillUpdate and componentWillUnmount.
 - In useEffect, we can give a call-back function that is run when the page is changed. 
+
+Ep9 Learnings:
+
+- In accordance with the Single Responsibility Principle, we created a custom hook called useRestaurantMenu in the utils. Now, in the Menu.js, since the data(of menu) fetching and display both were done in the same component. It becomes more efficient+testable+reusable to separate the fetching logic from the display logic. 
+- That was the reason why we created the custom hook(useRestaurantMenu.js) which takes care of data fetching, while the Menu.js is only concerned with data display logic. That is how we implemented the principle of separation of concerns too. 
+- Now, we know that the bundler we used is parcel, which bundles the whole code of all of our project. We can find the bundled code in the dist folder;
+- Now, the bundler just bundles all the JS code in one file, which can be tiresome to load due to it being too huge. Here is where the concept of (Diff names for the same thing - Chunking, Code Splitting, Dynamic Bundling, Lazy Loading, On-Demand Loading, Dynamic import, etc) comes in. 
+- Here the part of your app, is chunked into a separate JS bundle while bundling. This helps in efficient loading by decreasing the size of the JS file inside dist folder. 

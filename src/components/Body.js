@@ -2,35 +2,14 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import { RES_API } from "../utils/constants";
+import useRestaurantList from "../utils/useRestaurantList";
 
 const Body = () => {
-  const [originalData, setOriginalData] = useState([]);
-  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const { originalData, listOfRestaurants } = useRestaurantList();
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9352403&lng=77.624532&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-
-    const jsonData = await response.json();
-
-    setListOfRestaurants(
-      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
-    setOriginalData(
-      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
-    console.log(jsonData);
-  };
-
-  return listOfRestaurants.length === 0 ? (
+  return !listOfRestaurants || listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -82,9 +61,12 @@ const Body = () => {
       </div>
       <div className="res-container">
         {listOfRestaurants.map((Restaurant) => (
-          <Link to={"/restaurant/" + Restaurant.info.id} key={Restaurant.info.id}>
+          <Link
+            to={"/restaurant/" + Restaurant.info.id}
+            key={Restaurant.info.id}
+          >
             <RestaurantCard resData={Restaurant} />
-            </Link>
+          </Link>
         ))}
       </div>
     </div>
