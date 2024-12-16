@@ -115,3 +115,67 @@ Ep9 Learnings:
 - Now, we know that the bundler we used is parcel, which bundles the whole code of all of our project. We can find the bundled code in the dist folder;
 - Now, the bundler just bundles all the JS code in one file, which can be tiresome to load due to it being too huge. Here is where the concept of (Diff names for the same thing - Chunking, Code Splitting, Dynamic Bundling, Lazy Loading, On-Demand Loading, Dynamic import, etc) comes in. 
 - Here the part of your app, is chunked into a separate JS bundle while bundling. This helps in efficient loading by decreasing the size of the JS file inside dist folder. 
+- In React, Suspense is a feature that allows us to declaratively manage asynchronous data fetching and code-splitting in our applications.
+- Suspense is primarily used in combination with the lazy() function for dynamic imports and with the React.lazy() component to improve the user experience when loading data or components asynchronously.
+- When React encounters a Suspense boundary, it knows that there might be a delay in rendering, and it can handle that situation gracefully. But if Suspense is used in a synchronous component, it will throw an error, because Suspense is primarily for handling asynchronous component which requires a bit of delay, and a synchronous operations doesn't need any delay.
+
+Ep10 Learnings:
+
+- Higher Order Function => A function that takes a component as an input, enhances it by adding some extra features to it, and returns that component back as an output. Still, at the end of the day, it is just another JS function. And note that a component is also just another JS function.
+
+- Learnt to use Tailwind CSS.
+
+Ep11 Learnings:
+
+- Learnt to build an accordian in react.
+- Remember the distinction b/w .map, .filter and .find
+- Using react-icons library for icons.
+- Diff b/w <span> and <div>.
+- Controlled vs Uncontrolled components.
+- "Lifting the state up" => the state of children is decided by props from parents. For this the setState parameter of useState is sent to the children from parent component as a prop. Now, in order to know, how to send a function as a prop, it is like this: <ChildComponent setState={() => setState()} /> =>This is how you pass a function(here, it was setState) as a prop.
+- The Problem of "Props Drilling" in React. What is the solution? => React "Context" ie createContext and useContext.
+- Note: In a Class-Based Component, you cannot use context using useContext. It will need Context.Consumer.
+- To specify/change the value inside the context => .Provider is used.
+
+Ep12 Learnings:(Learning Redux)
+
+- What is a Redux Store? => A central storage object, where we can put most(all if we want to) of the data, which can be used by any component.
+- Now, since the data to be stored in the Redux store is going to be huge, we can make slices inside it. Each slice for a different kind of data.
+- Now, how to put our data from our react code into redux or in other words, how to write data inside our store? Well, here's the pathway: (Suppose our data is sent when we click an "Add" button) "Add" button pressed => 'Dispatches' an action => Calls a function => This function will modify the slice of our Redux store.
+- This function that modifies the redux slice, is known as a "reducer".
+- Now, in order to read the existing data inside our Redux Store, we use something called as a "Selector". So, this selector will read the data i/s the Redux Store and update our React Component.
+- This phenomenon where our React Component updates on the basis of the value inside the Redux Store is called as "Subscribing to the Store". So, our component is said to be subscribed to the store.
+- Hence, that's how our two components(one which updates the Redux Store and the other which is updated by being subscribed to the Redux Store) is linked behind the scene. 
+- Imp things to note:
+   > While using the useSelect, always subscribe only to the required portion of the store. This will assist in improving efficiency. Otherwise, if a component is subscribed to more than the required portion of the store. Your component will be updated even when the not-required part of the subscription is changed, which has a huge effect on the efficiency of the project.
+   > Use the "reducer" and "reducers" keywords very carefully.
+   > In the earlier version of Redux, the clear instruction was to NEVER MUTATE THE STATE, instead one needed to create a newState with the same properties as the first one, and then mutate that newState and then it used to replace the previous State. But now in RTK, one HAVE TO EITHER MUTATE THE EXISTING STATE or RETURN A NEW STATE. The trick that RTK does is that the earlier manual task of creating a new State and replacing the older one is now being handled by a JS library called IMMER behind the scenes. 
+
+Ep13 Learnings: (TESTING)
+
+- Types of Testing that a developer can employ:
+  1. Unit Testing: Testing one unit/component in isolation rather than the whole application.
+  2. Integration Testing: It focuses on evaluating how different components or modules of a system work together when integrated. It ensures that the various parts of the application interact correctly when combined.
+  3. End to End (e2e) Testing: This type of software testing evaluates the entire workflow of an application, from the initial user action to the final outcome, to ensure that the application behaves as expected in a real-world scenario.
+- Now, as developers, we are majorly concerned with the first two types. 
+- Testing is a part of coding. Writing test cases needs to be inculcated in the habit.
+- Now, in order to test the code, there are many libraries, one of the widely popular ones is React Testing Library (RTL). It is built on top of DOM testing library.
+- Now, if the react app is created by CREATE REACT APP, such libraries would have automatically been integrated.
+- Also, React Testing Library uses something called as Jest => It is a framework/std to write test-cases when it comes to JS. It is basically, a JS testing framework. And the DOM Testing library, on which RTL is built, is using this Jest library.
+- So, here are the steps to take to setting up testing in our app:
+  => Install React Testing Library
+  => Install Jest
+  => Install Babel dependencies
+  => Configure Babel
+  => Configure Parcel Config file to disable default babel transpilation(that we got from Parcel)
+  => Run "npm run test" with expected result: No tests found.
+  => Jest configuration (npx jest --init)
+  => Install jsdom library - It is a JS library that allows developers to interact with and manipulate HTML and DOM structures as if they were running in a browser, even though it's running server-side in Node.js.
+  => Install @babel/preset-react to make "jsx" work in test cases.
+  => Include @babel/preset-react inside of the babel config. => Now, to explain what this @babel/preset-react is doing - since babel is a transpiler (one form of language to another), this preset-react just converts the jsx code into html for testing to occur.
+  => Install @testing-library/jest-dom to use "toBeInTheDocument".
+- In testing, querying (ie screen.getBy__ or screen.getAllBy__) returns a react object.
+- "test" and "it" are the same thing.
+- When there are just too many test cases, it becomes difficult to keep track of them. We keep track of them by bunching them together in a block called as "describe".
+
+ 

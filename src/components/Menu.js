@@ -1,41 +1,45 @@
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
-import { RECIPE_IMG_URL } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import { useState } from "react";
+import RecipeInfo from "./RecipeInfo";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const Menu = () => {
   const params = useParams();
-  const { menuData, resName } = useRestaurantMenu(params.id);
+  const { menuData, resName, resMenuCards } = useRestaurantMenu(params.id);
+  const [cardIndex, setCardIndex] = useState(null);
 
-  console.log("Menu Data:", menuData);
-  console.log("Restaurant Name:", resName);
+  const toggle = (index) => {
+    setCardIndex(cardIndex === index ? null : index);
+  };
 
   if (!menuData || menuData.length === 0) {
     return <Shimmer />;
   }
 
+  console.log(cardIndex);
   return (
-    <div className="menu">
-      <div className="restaurant-name">
+    <div className="menu text-center mx-10">
+      <div className="restaurant-name text-3xl font-bold p-2">
         <h1>{resName}</h1>
       </div>
-      {menuData.map((recipe, index) => (
-        <div className="recipe-card" key={recipe?.card?.info?.id}>
-          <div className="recipe-info">
-            <div className="recipe-details">
-              <h2>
-                {recipe?.card?.info?.name} - Rs.{" "}
-                {(recipe?.card?.info?.defaultPrice ||
-                  recipe?.card?.info?.price) / 100}
-              </h2>
-              <h3>{recipe?.card?.info?.ratings?.aggregatedRating?.rating}</h3>
-              <p>{recipe?.card?.info?.description}</p>
+      {resMenuCards.map((menuCard, index) => (
+        <div className="menu-cards" key={index}>
+          <div className="mx-96 p-5 shadow-xl mb-2 rounded-3xl gap-3 border-solid border-black border-2  bg-gray-50">
+            <div className="flex justify-between font-semibold text-lg hover:cursor-pointer" onClick={() => toggle(index)}>
+              <div
+                className="card-title"
+                
+              >
+                <h2>{menuCard.card?.card?.title}</h2>
+              </div>
+              <div className="p-1 m-1">
+                {cardIndex === index ? <FaAngleUp /> : <FaAngleDown />}
+              </div>
             </div>
-            <div className="recipe-img">
-              <img src={RECIPE_IMG_URL + recipe?.card?.info?.imageId} />
-            </div>
+            {cardIndex === index && <RecipeInfo props={menuCard} />}
           </div>
-          {index !== menuData.length - 1 && <hr />}
         </div>
       ))}
     </div>

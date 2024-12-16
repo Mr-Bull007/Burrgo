@@ -5,6 +5,7 @@ const useRestaurantMenu = (resId) => {
   const [resInfo, setResInfo] = useState(null);
   const [menuData, setMenuData] = useState([]);
   const [resName, setResName] = useState("");
+  const [resMenuCards, setResMenuCards] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,17 +20,29 @@ const useRestaurantMenu = (resId) => {
         // Find the correct cards path
         const cards = restaurantData.cards;
 
-        // Log to help debug
-        console.log("Restaurant Cards:", cards);
 
         // Extract menu items and restaurant name
-        const restaurantInfoCard = cards.find(card => card.card?.card?.["@type"] === "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2" );
+        const restaurantInfoCard = cards.find(
+          (card) =>
+            card.card?.card?.["@type"] ===
+            "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2"
+        );
 
         const menuCard = cards.find(
           (card) => card.groupedCard?.cardGroupMap?.REGULAR
         );
 
+        const allSectionItemCards =
+          menuCard.groupedCard?.cardGroupMap?.REGULAR?.cards;
+
+        const onlyMenuItemCards = allSectionItemCards.filter(
+          (c) =>
+            c.card?.card?.["@type"] ===
+            "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+        );
+
         const name = restaurantInfoCard?.card?.card?.text;
+        
         const menuItems =
           menuCard?.groupedCard?.cardGroupMap?.REGULAR?.cards.find(
             (item) => item.card?.card?.itemCards
@@ -38,6 +51,7 @@ const useRestaurantMenu = (resId) => {
         setResName(name || "");
         setMenuData(menuItems || []);
         setResInfo(restaurantData);
+        setResMenuCards(onlyMenuItemCards || []);
       } catch (error) {
         console.error("Fetch Error:", error);
       }
@@ -46,7 +60,7 @@ const useRestaurantMenu = (resId) => {
     fetchData();
   }, [resId]);
 
-  return { resInfo, menuData, resName };
+  return { resInfo, menuData, resName, resMenuCards };
 };
 
 export default useRestaurantMenu;

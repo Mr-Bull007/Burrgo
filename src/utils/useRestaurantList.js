@@ -22,14 +22,14 @@ const useRestaurantList = () => {
         setListOfRestaurants(resListCard || []);
       } catch (error) {
         <h2>Fetch error: {error}</h2>
+        console.log("Fetch error:", error);
       }
     };
     fetchData();
-  });
+  }, []);
 
-  return { originalData, listOfRestaurants };
+  return { originalData, listOfRestaurants, setListOfRestaurants };
 };
 
 export default useRestaurantList;
 
-// jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
