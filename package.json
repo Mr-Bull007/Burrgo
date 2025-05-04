@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mr-Bull007/Learning-React.git"
+    "url": "git+https://github.com/Mr-Bull007/Burrgo.git"
   },
   "author": "Rushabh Sagara",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mr-Bull007/Learning-React/issues"
+    "url": "https://github.com/Mr-Bull007/Burrgo/issues"
   },
-  "homepage": "https://github.com/Mr-Bull007/Learning-React#readme",
+  "homepage": "https://github.com/Mr-Bull007/Burrgo#readme",
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
