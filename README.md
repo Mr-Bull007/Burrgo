@@ -1,4 +1,4 @@
-# NAMASTE REACT!
+#Burrgo Project
 
 My Food-Ordering App file structure:
 
