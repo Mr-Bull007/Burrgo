@@ -1,0 +1,626 @@
+{
+  "485933": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "Dindigual Thalappakatti"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from Dindigual Thalappakatti",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "Dindigual Thalappakatti Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "1013619": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "Chinese Wok"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from Chinese Wok",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "Chinese Wok Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "5934": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "Burger King"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from Burger King",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "Burger King Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "10576": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "Pizza Hut"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from Pizza Hut",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "Pizza Hut Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "65797": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "Leon's - Burgers and Grills"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from Leon's - Burgers and Grills",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "Leon's - Burgers and Grills Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "229": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "Meghana Foods"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from Meghana Foods",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "Meghana Foods Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "78511": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "NIC Ice Creams"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from NIC Ice Creams",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "NIC Ice Creams Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "156119": {
+    "data": {
+      "cards": [
+        {
+          "card": {
+            "card": {
+              "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+              "text": "The Good Bowl"
+            }
+          }
+        },
+        {
+          "groupedCard": {
+            "cardGroupMap": {
+              "REGULAR": {
+                "cards": [
+                  {
+                    "card": {
+                      "card": {
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "1",
+                                "name": "Special Dish",
+                                "category": "Main Course",
+                                "description": "Signature dish from The Good Bowl",
+                                "imageId": "image123",
+                                "price": 19900,
+                                "ratings": {
+                                  "aggregatedRating": {
+                                    "rating": "4.5",
+                                    "ratingCount": "200+"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "card": {
+                      "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                        "title": "Recommended",
+                        "itemCards": [
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-1",
+                                "name": "The Good Bowl Special Meal",
+                                "price": 25000
+                              }
+                            }
+                          },
+                          {
+                            "card": {
+                              "info": {
+                                "id": "dish-2",
+                                "name": "Classic Drink",
+                                "price": 8000
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
