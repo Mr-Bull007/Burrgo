@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MENU_API } from "./constants";
+import mockMenuData from "../components/mockData/mockRestaurantMenu.json";
 
 const useRestaurantMenu = (resId) => {
   const [resInfo, setResInfo] = useState(null);
@@ -19,7 +20,6 @@ const useRestaurantMenu = (resId) => {
 
         // Find the correct cards path
         const cards = restaurantData.cards;
-
 
         // Extract menu items and restaurant name
         const restaurantInfoCard = cards.find(
@@ -42,7 +42,7 @@ const useRestaurantMenu = (resId) => {
         );
 
         const name = restaurantInfoCard?.card?.card?.text;
-        
+
         const menuItems =
           menuCard?.groupedCard?.cardGroupMap?.REGULAR?.cards.find(
             (item) => item.card?.card?.itemCards
@@ -53,7 +53,50 @@ const useRestaurantMenu = (resId) => {
         setResInfo(restaurantData);
         setResMenuCards(onlyMenuItemCards || []);
       } catch (error) {
-        console.error("Fetch Error:", error);
+        console.error("API fetch failed, using mock data:", error);
+        const mockData = mockMenuData[resId];
+        try {
+          if (mockData) {
+            const restaurantData = mockData.data;
+
+            // Find the correct cards path
+            const cards = restaurantData.cards;
+
+            // Extract menu items and restaurant name
+            const restaurantInfoCard = cards.find(
+              (card) =>
+                card.card?.card?.["@type"] ===
+                "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2"
+            );
+
+            const menuCard = cards.find(
+              (card) => card.groupedCard?.cardGroupMap?.REGULAR
+            );
+
+            const allSectionItemCards =
+              menuCard.groupedCard?.cardGroupMap?.REGULAR?.cards;
+
+            const onlyMenuItemCards = allSectionItemCards.filter(
+              (c) =>
+                c.card?.card?.["@type"] ===
+                "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+            );
+
+            const name = restaurantInfoCard?.card?.card?.text;
+
+            const menuItems =
+              menuCard?.groupedCard?.cardGroupMap?.REGULAR?.cards.find(
+                (item) => item.card?.card?.itemCards
+              )?.card?.card?.itemCards;
+
+            setResName(name || "");
+            setMenuData(menuItems || []);
+            setResInfo(restaurantData);
+            setResMenuCards(onlyMenuItemCards || []);
+          }
+        } catch (mockError) {
+          console.error("Failed to load mock data:", mockError);
+        }
       }
     };
 
