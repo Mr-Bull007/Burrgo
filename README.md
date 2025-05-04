@@ -94,7 +94,8 @@ npm install
 npm run start
 ```
 
-🧠 Future Plans
+## 🧠 Future Plans
+
 🔐 Full-fledged Login/Auth system
 
 🛍️ Backend integration for order/purchase flow
@@ -105,17 +106,17 @@ npm run start
 
 🖼️ Lazy loading + skeleton loaders
 
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 Inspired by Swiggy.com
 
 Created as a part of a learning project from the Namaste React Course by Akshay Saini
 
-🧑‍💻 Author
+## 🧑‍💻 Author
 Rushabh Bhupendrakumar Sagara
 GitHub · LinkedIn
 Email: rushabhdev0999@gmail.com
 
-📄 License
+## 📄 License
 This project is for educational purposes only. It is not intended for commercial use or distribution.
 
 
